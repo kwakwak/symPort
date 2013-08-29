@@ -34,7 +34,7 @@ class DefaultController extends Controller
         );
     }
     return $this->render(
-        'kwakPortfolioBundle:Default:base.html.twig',
+        'kwakPortfolioBundle:Default:titles.html.twig',
         array('name' => $product->getName())
     );
 	}

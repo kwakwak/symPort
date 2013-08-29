@@ -1,0 +1,146 @@
+.close{
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 10px;
+	z-index: 103;
+	cursor: pointer;
+}
+.overlay{
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.6;
+	z-index: 100;	
+	display: none;
+}
+
+.container{
+	background-color: black;
+	width: 1366px;
+	margin: auto;
+	border-style:solid;
+	z-index: 102;
+	position: fixed;
+	display: none;
+	top: 25px;
+	left: 50%;
+	margin-left: -683px;
+}
+
+.tumb-imgs{
+	background-color: black;
+	padding-top: 5px;
+	text-align: center;
+	position: relative;
+	display: block;
+	overflow: hidden;
+
+}
+
+body{
+	background-color: #3E4E13;
+}
+
+img.selectedTumb{
+	opacity:1;
+}
+.tumb{
+	opacity:0.2;
+	border-style:solid;
+}
+div.titles{
+
+    overflow: hidden;
+    padding: 5px;
+    position: relative;
+    
+}
+
+img.title{
+
+border-style:solid;
+display: block;
+
+}
+span.title {
+	background-color: black;
+	color: white;
+	position: absolute;
+	z-index: 1;
+	left:0;
+	width: 95%;
+	bottom: 0;
+	text-align: center;
+	padding: 5px;
+	opacity:0.7;
+	display: none;
+	
+}
+div.title
+{
+	position: relative;
+	display: inline;
+	float: left;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+
+
+a.prev , a.next {
+font-size: large;
+
+}
+
+
+a.next , a.prev {
+	height: 100%;
+	width: 50%;
+	background-repeat:no-repeat;
+
+}
+a.next{
+	float: right;
+	right: 0;
+	background-position:right center; 
+}
+a.prev{
+	float: left;
+	left: 0;
+	background-position:left center; 
+}
+.main{
+	width: 1366px;
+	height: 768px;
+	text-align: center;
+	position: relative;
+}
+.img{
+	position: absolute;
+	top:0;
+	left: 0;
+	background: url('loading.gif') no-repeat;
+}
+.nav{
+	position: absolute;
+	top:0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {text-decoration:none;}
+a:active {text-decoration:none;}
+
+a:link {color:white;}      /* unvisited link */
+a:visited {color:white;}  /* visited link */
+a:hover {color:white;}  /* mouse over link */
+a:active {color:white;}  /* selected link */
+

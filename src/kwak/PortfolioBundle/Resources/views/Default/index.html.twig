@@ -3,19 +3,31 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>{% block title %}Test Application{% endblock %}</title>
+        {% javascripts '@kwakPortfolioBundle/Resources/public/js/*' %}
+            <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+        {% stylesheets '@kwakPortfolioBundle/Resources/public/css/*' filter='cssrewrite' %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
     </head>
     <body>
-        <div id="sidebar">
-            {% block sidebar %}
-                <ul>
-                      <li><a href="/">Home</a></li>
-                      <li><a href="/blog">Blog</a></li>
-                </ul>
-            {% endblock %}
+        <div id="titles">
+            {% block titles %}{% endblock %}
         </div>
+            <div class="overlay"></div>
+        <div class="container">
+            <div class="main">
+                <div class="img">
+                    <img id="mainImg" >
+                    <div class="nav">
+                        <a href="#" class="prev"></a>
+                        <a href="#" class="next"></a>
+                    </div>
+                </div>
+            </div>
 
-        <div id="content">
-            {% block body %}{% endblock %}
+            <div class="tumb-imgs"></div>
+            <img src="img/close.png" class="close">
         </div>
     </body>
 </html>

@@ -1,0 +1,4 @@
+kwak_portfolio:
+    resource: "@kwakPortfolioBundle/Resources/config/routing.yml"
+    prefix:   /
+

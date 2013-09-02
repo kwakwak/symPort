@@ -11,7 +11,7 @@
         {% endstylesheets %}
     </head>
     <body>
-        <div id="titles">
+        <div class="titles">
             {% block titles %}{% endblock %}
         </div>
             <div class="overlay"></div>
@@ -27,7 +27,7 @@
             </div>
 
             <div class="tumb-imgs"></div>
-            <img src="img/close.png" class="close">
+            <img src="{{ asset('images/close.png') }}" class="close">
         </div>
     </body>
 </html>

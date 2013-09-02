@@ -123,7 +123,6 @@ a.prev{
 	position: absolute;
 	top:0;
 	left: 0;
-	background: url('loading.gif') no-repeat;
 }
 .nav{
 	position: absolute;

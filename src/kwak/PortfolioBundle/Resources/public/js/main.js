@@ -34,7 +34,7 @@ $(document).ready(function(){
 	function changeBG(name){
 		var parts = name.split('/');
     	name = parts[parts.length-1];
-		$("#mainImg").attr('src','pictures/'+name);
+		$("#mainImg").attr('src','/symPort/web/pictures/'+name);
 	};
 
 // highlight selected tumb img
@@ -74,10 +74,10 @@ $(document).ready(function(){
 // Show arrows on main picture
 
 	$('a.prev').mouseover(function() {
-		$(this).css('background-image', 'url("img/prev.png")');
+		$(this).css('background-image', 'url("/symPort/web/images/prev.png")');
 	});
 	$('a.next').mouseover(function() {
-		$(this).css('background-image', 'url("img/next.png")');
+		$(this).css('background-image', 'url("/symPort/web/images/next.png")');
 	});
 
 	$('a.prev').mouseout(function() {
@@ -130,7 +130,7 @@ $(document).ready(function(){
 	$('div.title').on('click',function(){
 		name=$(this).data('name');
 		if ($('input').val() != name) {
-			$('div.tumb-imgs').load('sets/'+name+'.set', function() {
+			$('div.tumb-imgs').load('/symPort/web/sets/'+name+'.set', function() {
 				start();
 
 			});

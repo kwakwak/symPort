@@ -22,20 +22,18 @@ class DefaultController extends Controller
     return new Response('Created product id '.$product->getId());
     }
 
-    public function showAction($id)
+    public function showAction()
 	{
-    $product = $this->getDoctrine()
-        ->getRepository('kwakPortfolioBundle:imgSets')
-        ->find($id);
 
-    if (!$product) {
-        throw $this->createNotFoundException(
-            'No product found for id '.$id
-        );
-    }
+    $repository = $this->getDoctrine()
+    ->getRepository('kwakPortfolioBundle:imgSets');
+
+    $imgSets = $repository->findAll();
+
+    
     return $this->render(
         'kwakPortfolioBundle:Default:titles.html.twig',
-        array('name' => $product->getName())
+        array('imgSets' =>  $imgSets)
     );
 	}
 }

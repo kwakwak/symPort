@@ -35,6 +35,15 @@ class imgSets
      */
     private $title;
 
+     /**
+     * @var string
+     *
+     * @ORM\Column(name="imgSrc", type="string", length=255)
+     */
+    private $imgSrc;
+
+
+
 
     /**
      * Get id
@@ -90,5 +99,28 @@ class imgSets
     public function getTitle()
     {
         return $this->title;
+    }
+
+    /**
+     * Set imgSrc
+     *
+     * @param string $imgSrc
+     * @return imgSets
+     */
+    public function setImgSrc($imgSrc)
+    {
+        $this->imgSrc = $imgSrc;
+    
+        return $this;
+    }
+
+    /**
+     * Get imgSrc
+     *
+     * @return string 
+     */
+    public function getImgSrc()
+    {
+        return $this->imgSrc;
     }
 }

@@ -8,7 +8,23 @@ use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
 {
+
     public function indexAction()
+    {
+
+    $repository = $this->getDoctrine()
+    ->getRepository('kwakPortfolioBundle:imgSets');
+
+    $imgSets = $repository->findAll();
+
+    
+    return $this->render(
+        'kwakPortfolioBundle:Default:titles.html.twig',
+        array('imgSets' =>  $imgSets)
+    );
+    }
+
+    public function addAction()
     {
    	$product = new imgSets();
     $product->setName('A Foo Bar');
@@ -21,19 +37,4 @@ class DefaultController extends Controller
 
     return new Response('Created product id '.$product->getId());
     }
-
-    public function showAction()
-	{
-
-    $repository = $this->getDoctrine()
-    ->getRepository('kwakPortfolioBundle:imgSets');
-
-    $imgSets = $repository->findAll();
-
-    
-    return $this->render(
-        'kwakPortfolioBundle:Default:titles.html.twig',
-        array('imgSets' =>  $imgSets)
-    );
-	}
 }

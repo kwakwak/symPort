@@ -31,9 +31,12 @@ class DefaultController extends Controller
 
         $images = new Images();
 
-
         $form = $this->createFormBuilder($images)
-            ->add('imgSet', 'text')
+
+            ->add('imgSet', 'entity', array(
+                'class' => 'kwakPortfolioBundle:imgSets',
+                'property' => 'title',
+            ))
             ->add('file')
             ->add('save', 'submit')
             ->getForm();
@@ -45,7 +48,7 @@ class DefaultController extends Controller
 
             $images->upload();
             $images->setImgName($images->path);
-            
+
             $em->persist($images);
             $em->flush();
         }

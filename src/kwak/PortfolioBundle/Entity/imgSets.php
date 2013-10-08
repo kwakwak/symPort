@@ -123,4 +123,10 @@ class imgSets
     {
         return $this->imgSrc;
     }
+
+    public function __toString()
+    {
+        return strval($this->title);
+    }
+
 }

@@ -31,8 +31,8 @@ class DefaultController extends Controller
 
         $images = new Images();
 
+
         $form = $this->createFormBuilder($images)
-            ->add('imgName', 'text')
             ->add('imgSet', 'text')
             ->add('file')
             ->add('save', 'submit')
@@ -44,7 +44,8 @@ class DefaultController extends Controller
             $em = $this->getDoctrine()->getManager();
 
             $images->upload();
-
+            $images->setImgName($images->path);
+            
             $em->persist($images);
             $em->flush();
         }

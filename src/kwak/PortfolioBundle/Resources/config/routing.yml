@@ -2,6 +2,6 @@ kwak_portfolio_homepage:
     pattern:  /
     defaults: { _controller: kwakPortfolioBundle:Default:index }
 kwak_portfolio_show:
-    pattern:  /show/{id}
-    defaults: { _controller: kwakPortfolioBundle:Default:show }
+    pattern:  /add
+    defaults: { _controller: kwakPortfolioBundle:Default:add }
 

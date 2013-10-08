@@ -11,6 +11,13 @@
 
     </head>
     <body>
+
+    {% if form is defined %}
+        {{ form(form) }}
+    {% endif %}
+            
+
+        <br/>
         <div class="titles">
             {% block titles %}{% endblock %}
         </div>

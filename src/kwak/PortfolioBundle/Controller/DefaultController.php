@@ -4,7 +4,9 @@ namespace kwak\PortfolioBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use kwak\PortfolioBundle\Entity\imgSets;
+use kwak\PortfolioBundle\Entity\Images;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
@@ -24,17 +26,27 @@ class DefaultController extends Controller
     );
     }
 
-    public function addAction()
+    public function addAction(Request $request)
     {
-   	$product = new imgSets();
-    $product->setName('A Foo Bar');
-    $product->setTitle('lalala');
 
+        $images = new Images();
 
-    $em = $this->getDoctrine()->getManager();
-    $em->persist($product);
-    $em->flush();
+        $form = $this->createFormBuilder($images)
+            ->add('imgName', 'text')
+            ->add('imgSet', 'text')
+            ->add('save', 'submit')
+            ->getForm();
 
-    return new Response('Created product id '.$product->getId());
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($images);
+            $em->flush();
+        }
+
+        return $this->render('kwakPortfolioBundle:Default:index.html.twig', array(
+            'form' => $form->createView(),
+        ));
     }
 }

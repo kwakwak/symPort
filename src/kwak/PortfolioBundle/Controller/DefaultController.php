@@ -53,6 +53,36 @@ class DefaultController extends Controller
             $em->flush();
         }
 
+        $repository = $this->getDoctrine()
+            ->getRepository('kwakPortfolioBundle:Images');
+
+        $allImg = $repository->findAll();
+
+        return $this->render('kwakPortfolioBundle:Default:index.html.twig', array(
+            'form' => $form->createView(),
+            'allImg' => $allImg,
+        ));
+    }
+    public function createImgSetAction(Request $request)
+    {
+
+        $images = new Images();
+
+        $form = $this->createFormBuilder($images)
+
+            ->add('imgSet', 'entity', array(
+                'class' => 'kwakPortfolioBundle:imgSets',
+                'property' => 'title',
+            ))
+            ->add('save', 'submit')
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+
+        }
+
         return $this->render('kwakPortfolioBundle:Default:index.html.twig', array(
             'form' => $form->createView(),
         ));

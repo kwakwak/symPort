@@ -4,4 +4,6 @@ kwak_portfolio_homepage:
 kwak_portfolio_show:
     pattern:  /add
     defaults: { _controller: kwakPortfolioBundle:Default:add }
-
+kwakPortfolioBundle_images:
+    resource: "@kwakPortfolioBundle/Resources/config/routing/images.yml"
+    prefix:   /images

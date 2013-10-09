@@ -13,7 +13,10 @@
     <body>
 
     {% if form is defined %}
-        {{ form(form) }}
+        {{ form(form) }} <br/>
+          {% for img in allImg %}
+              {{ img.imgName }} - {{ img.imgSet }}</br>
+          {% endfor %}
     {% endif %}
             
 

@@ -1,0 +1,12 @@
+<input type="hidden" name="setName" value="animals2">
+<input type="hidden" name="imgNum" value="10">
+<img src="/symPort/web/pictures/tumb/10.jpg" class="tumb">
+<img src="/symPort/web/pictures/tumb/11.jpg" class="tumb">
+<img src="/symPort/web/pictures/tumb/12.jpg" class="tumb">
+<img src="/symPort/web/pictures/tumb/13.jpg" class="tumb">
+<img src="/symPort/web/pictures/tumb/14.jpg" class="tumb">
+<img src="/symPort/web/pictures/tumb/15.jpg" class="tumb">
+<img src="/symPort/web/pictures/tumb/16.jpg" class="tumb">
+<img src="/symPort/web/pictures/tumb/17.jpg" class="tumb">
+<img src="/symPort/web/pictures/tumb/18.jpg" class="tumb">
+<img src="/symPort/web/pictures/tumb/19.jpg" class="tumb">

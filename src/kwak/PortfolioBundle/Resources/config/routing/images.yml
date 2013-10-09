@@ -1,0 +1,30 @@
+images:
+    pattern:  /
+    defaults: { _controller: "kwakPortfolioBundle:Images:index" }
+
+images_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "kwakPortfolioBundle:Images:show" }
+
+images_new:
+    pattern:  /new
+    defaults: { _controller: "kwakPortfolioBundle:Images:new" }
+
+images_create:
+    pattern:  /create
+    defaults: { _controller: "kwakPortfolioBundle:Images:create" }
+    requirements: { _method: post }
+
+images_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "kwakPortfolioBundle:Images:edit" }
+
+images_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "kwakPortfolioBundle:Images:update" }
+    requirements: { _method: post|put }
+
+images_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "kwakPortfolioBundle:Images:delete" }
+    requirements: { _method: post|delete }
